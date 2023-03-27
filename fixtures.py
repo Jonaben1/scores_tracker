@@ -5,7 +5,7 @@ import pandas as pd
 
 
 
-teams = ['Arsenal', 'Aston Villa', 'Bournemouth', 'Brentford', 'Brighton', 'Chelsea', 'Crystal Palace', 'Everton', 'Fulham',
+club_names = ['Arsenal', 'Aston Villa', 'Bournemouth', 'Brentford', 'Brighton', 'Chelsea', 'Crystal Palace', 'Everton', 'Fulham',
          'Leeds', 'Leicester', 'Liverpool', 'Manchester United', 'Manchester City', 'Newcastle', 'Nottingham Forest', 'Southampton',
          'Tottenham', 'West Ham', 'Wolves']
 

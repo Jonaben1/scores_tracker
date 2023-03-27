@@ -18,14 +18,14 @@ for i in range(len(fix)):
 # rearranging the table
 def arrange_table():
     dd = []
-    pos = []
+    df = []
     for i in tab:
         if len(i) == 8:
             dd.append(i[1:])
         elif len(i) == 9:
             dd.append([f'{i[1]} {i[2]}', i[3], i[4], i[5], i[6], i[7], i[8]])
-        pos.append(i[0])
-    return dd, pos
+        df.append(i[0])
+    return dd, df
 
 
 dd, pos = arrange_table()

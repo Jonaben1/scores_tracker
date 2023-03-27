@@ -1,5 +1,5 @@
 import streamlit as st
-from fixtures import df, teams
+from fixtures import df, club_names
 import pandas as pd
 from table import table
 from stats import goals, assists, all_time_goals, all_time_assists
@@ -26,7 +26,7 @@ def get_scores():
     if op == 'All':
         st.dataframe(df)
     else:
-        team = st.selectbox('Select a team', teams)
+        team = st.selectbox('Select a team', club_names)
         team_select = df[(df.Home == team) | (df.Away == team)]
         st.dataframe(team_select)
 
