@@ -30,7 +30,7 @@ def arrange_table():
 
 dd, pos = arrange_table()
 columns = ['Club', 'MP', 'W', 'D', 'L', 'GD', 'PTS']
-table = pd.DataFrame(dd, columns=columns, index=pos)
+table = pd.DataFrame(dd, columns=columns, index=[i for i in range(1, 19)])
 
 
 
