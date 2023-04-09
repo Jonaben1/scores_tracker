@@ -3,6 +3,7 @@ from fixtures import df, club_names
 import pandas as pd
 from table import table
 from stats import goals, assists, all_time_goals, all_time_assists
+from datetime import datetime
 
 def main():
     st.sidebar.header('English Premier League')
@@ -21,7 +22,7 @@ def main():
 
 def get_scores():
     st.header('English Premier League LiveScores')
-    st.info('Check the latest fixtures')
+    st.info(f'Latest fixtures as at {datetime.today()}')
     op = st.radio('Which fixtures do you want to check?', ['All', 'Team'])
     if op == 'All':
         st.dataframe(df)
@@ -33,12 +34,13 @@ def get_scores():
 
 def get_table():
     st.header('English Premier League Table - 2022/2023')
-    st.info('Check current standings')
+    st.info(f'Current Standings as at {datetime.today()}')
     st.dataframe(table)
 
 
 def get_stats():
     st.header('English Premier League Stats')
+    st.info(f'Current Standings as at {datetime.today()}')
     op = st.selectbox('Choose an option', ['Goals', 'Assists'])
     if op == 'Goals':
         s = st.radio('Choose an option', ['Current', 'All Time'])
